@@ -106,6 +106,8 @@
 		<reactor-netty>0.7.5.RELEASE</reactor-netty>
 		<commons-io-version>2.4</commons-io-version>
 		<commons-codec-version>1.13</commons-codec-version>
+		<rewrite-version>7.21.3</rewrite-version>
+		<rewrite-spring-version>4.19.3</rewrite-spring-version>
 
 		<signing.skip>true</signing.skip>
 		<signing.alias>vmware</signing.alias>

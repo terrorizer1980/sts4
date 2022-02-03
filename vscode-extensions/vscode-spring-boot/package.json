@@ -30,7 +30,8 @@
     "onLanguage:spring-boot-properties-yaml",
     "onLanguage:java",
     "onLanguage:xml",
-    "onDebugResolve:java"
+    "onDebugResolve:java",
+    "onCommand:vscode-spring-boot.rewrite.list"
   ],
   "contributes": {
     "javaExtensions": [
@@ -65,10 +66,30 @@
         "configuration": "./properties-support/language-configuration.json"
       }
     ],
+    "menus": {
+      "editor/context": [
+        {
+          "when": "resourceFilename == pom.xml",
+          "command": "vscode-spring-boot.rewrite.list",
+          "group": "SpringBoot"
+        }
+      ],
+      "explorer/context": [
+        {
+          "when": "resourceFilename == pom.xml",
+          "command": "vscode-spring-boot.rewrite.list",
+          "group": "SpringBoot"
+        }
+      ]
+    },
     "commands": [
       {
         "command": "vscode-spring-boot.live-hover.connect",
         "title": "Manage Live Spring Boot Process Connections"
+      },
+      {
+        "command": "vscode-spring-boot.rewrite.list",
+        "title": "Rewrite Refactorings..."
       }
     ],
     "configuration": {
